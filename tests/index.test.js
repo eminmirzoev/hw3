@@ -11,7 +11,7 @@ discribe('getProductSum', () => {
         assert.deepEqual(actual, expected);
         });
 
-    it (' should return + of first and second (8, 2)' function () {
+    it (' should return + of first and second (8, 2)', function () {
         const first = 8;
         const second = 3;
         const expected = 10;
@@ -22,5 +22,5 @@ discribe('getProductSum', () => {
         //Then
         assert.deepEqual(actual, expected);
     });
-    
+
 });
