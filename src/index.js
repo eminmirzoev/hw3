@@ -1,8 +1,10 @@
 
-const getProductOrSum = (first, second) => first % 2
-      ? first * second
-      : first + second;
+const getProductOrSum = (first, second) => {
+    const multy = first * second;
+    const summ = first + second;
 
+return  first % 2 === 0 ? multy : summ;
+}
 const getMaxOfProductSum = (first, second, third) => {
     const product = first * second * third;
     const sum = first * second + third;
