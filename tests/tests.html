@@ -5,17 +5,19 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
     </head>
     <body>
-        <div id="mocha"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+        <script>
+                mocha.setup('bdd');
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
         <script>
-            mocha.setup('bdd');
-            var assert = chai.assert;
+                var assert = chai.assert;
         </script>
+        <div id="mocha"></div>
         <script src="../src/index.js"></script>
         <script src="./index.test.js"></script>
         <script>
-            mocha.run();
+                mocha.run();
         </script>
     </body>
 </html>

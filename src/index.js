@@ -6,6 +6,6 @@ const getProductOrSum = (first, second) => first % 2
 const getMaxOfProductSum = (first, second, third) => {
     const product = first * second * third;
     const sum = first * second + third;
-    const product: number 
+    
     return product > sum ? product + 3 : sum + 3;
 }
