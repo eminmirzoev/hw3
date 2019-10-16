@@ -150,4 +150,65 @@ describe('getQuarter', () => {
 
 });
 
-describe('')
+describe('getOnlyPositiveSum', () => {
+    it('should return first (5, -7, -3)', () => {
+        const first = 5;
+        const second = -7;
+        const third = -3;
+        const expected = 5;
+
+        //When
+        const actual = getOnlyPositiveSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    });
+    it('should return second (-1, 4, -5)', () => {
+        const first = -1;
+        const second = 4;
+        const third = -5;
+        const expected = 4;
+
+        //When
+        const actual = getOnlyPositiveSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    });
+    it('shoul return third (-2, -5, 10)', () => {
+        const first = -2;
+        const second = -5;
+        const third = 10;
+        const expected = 10;
+
+        //When
+        const actual = getOnlyPositiveSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    });
+    it('should return two positiv (9, -1, 3)', () => {
+        const first = 9;
+        const second = -1;
+        const third = 3;
+        const expected = 12;
+
+        //When
+        const actual = getOnlyPositiveSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    });
+    it('should return all (1, 3, 5)', () => {
+        const first = 1;
+        const second = 3;
+        const third = 5;
+        const expected = 9;
+
+        //When
+        const actual = getOnlyPositiveSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    });
+});

@@ -18,7 +18,7 @@ const getQuarter = (x, y) => {
          result = 'Y-axis';
      } else if ( x > 0 && y > 0 ) {
         result = '1st quarter';
-    } else if ( x< 0 && y > 0 ) {
+    } else if ( x < 0 && y > 0 ) {
         result =  '2nd quarter';
     } else if ( x < 0 && y < 0 ) {
         result = '3rd quarter';
