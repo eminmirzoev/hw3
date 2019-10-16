@@ -58,6 +58,96 @@ describe('getProductOrSum', function () {
 
 });
 
-describe('getMaxOfProductSum = (first, second, third)', () => {
-   
-})
+describe('getQuarter', () => {
+   it('should return 1st quarter (1, 1)', () => {
+       const x = 1;
+       const y = 1;
+       const expected = '1st quarter';
+
+       //When
+       const actual = getQuarter(x, y);
+
+       //Then
+       assert.deepEqual(actual, expected);
+    })
+    it('should return 2nd quarter (-1, 1)', () => {
+        const x = -1;
+        const y = 1;
+        const expected = '2nd quarter';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return 3rd quarter (-1, -1)', () => {
+        const x = -1;
+        const y = -1;
+        const expected = '3rd quarter';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return 4th quarter (1, -1)', () => {
+        const x = 1;
+        const y = -1;
+        const expected = '4th quarter';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return X-axis (1, 0)', () => {
+        const x = 1;
+        const y = 0;
+        const expected = 'X-axis';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return Y-axis (0, 1)', () => {
+        const x = 0;
+        const y = 1;
+        const expected = 'Y-axis';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return frame Origin (0, 0)', () => {
+        const x = 0;
+        const y = 0;
+        const expected = 'frame Origin';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return empty line (undefined, undefined)', () => {
+        const x = undefined;
+        const y = undefined;
+        const expected = ' ';
+
+        //When
+        const actual = getQuarter(x, y);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
+});
+
+describe('')
