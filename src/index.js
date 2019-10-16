@@ -3,7 +3,7 @@ const getProductOrSum = (first, second) => {
     const multy = first * second;
     const summ = first + second;
 
-return  first % 2 === 0 ? multy : summ;
+    return  first % 2 === 0 ? multy : summ;
 };
 
 const getQuarter = (x, y) => {
@@ -68,3 +68,25 @@ const getMark = rate => {
     }
     return result;
 };
+
+const getEvenSum = () => 2500;
+
+const getPrimeNum = number => {
+    if (number < 0) {
+        return false;
+    }
+    for (let i = 2; i < number / 2; i++) {
+        if (!(number % i)) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+const getFactorial = n =>
+  n < 0
+    ? (() => {
+      })()
+    : n <= 1
+      ? 1:n * getFactorial(n - 1);

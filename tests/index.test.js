@@ -336,3 +336,104 @@ describe('getMark', () => {
     })
 
 });
+
+describe('getEvenSum', () => {
+    it('should return sum (2500)', () => {
+        const expected = 2500;
+
+        //When
+        const actual = getEvenSum();
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
+});
+
+describe('getPrimeNum', () => {
+    it('should return true (23)', () => {
+        const number = 23;
+        const expected = true;
+
+        //When
+        const actual = getPrimeNum(number);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return false (-23)', () => {
+        const number = -23;
+        const expected = false;
+
+        //When
+        const actual = getPrimeNum(number);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return true (0)', () => {
+        const number = 0;
+        const expected = true;
+
+        //When
+        const actual = getPrimeNum(number);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return true (undefined)', () => {
+        const number = undefined;
+        const expected = true;
+
+        //When
+        const actual = getPrimeNum(number);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
+});
+
+describe('getFactorial', () => {
+    it('should return zero (6)', () => {
+        const number = 6;
+        const expected = 240;
+
+        //When
+        const actual = getFactorial();
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return zero (-1)', () => {
+        const number = -1;
+        const expected = 0;
+
+        //When
+        const actual = getFactorial();
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return zero (0)', () => {
+        const number = 0;
+        const expected = 0;
+
+        //When
+        const actual = getFactorial();
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return zero (undefined)', () => {
+        const number = undefined;
+        const expected = 0;
+
+        //When
+        const actual = getFactorial();
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
+});
