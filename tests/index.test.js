@@ -9,8 +9,7 @@ describe('getProductOrSum', function () {
 
         //Then
         assert.deepEqual(actual, expected);
-     });
-     
+     })
      it (' should return + of first and second (7, 2)', () => {
         const first = 7;
         const second = 2;
@@ -21,7 +20,7 @@ describe('getProductOrSum', function () {
 
         //Then
         assert.deepEqual(actual, expected);
-    });
+    })
     it ('should return NaN if first undefined (undefined, 2)', () => {
         const first = undefined;
         const second = 2;
@@ -162,7 +161,7 @@ describe('getOnlyPositiveSum', () => {
 
         //Then
         assert.deepEqual(actual, expected);
-    });
+    })
     it('should return second (-1, 4, -5)', () => {
         const first = -1;
         const second = 4;
@@ -174,7 +173,7 @@ describe('getOnlyPositiveSum', () => {
 
         //Then
         assert.deepEqual(actual, expected);
-    });
+    })
     it('shoul return third (-2, -5, 10)', () => {
         const first = -2;
         const second = -5;
@@ -186,7 +185,7 @@ describe('getOnlyPositiveSum', () => {
 
         //Then
         assert.deepEqual(actual, expected);
-    });
+    })
     it('should return two positiv (9, -1, 3)', () => {
         const first = 9;
         const second = -1;
@@ -198,7 +197,7 @@ describe('getOnlyPositiveSum', () => {
 
         //Then
         assert.deepEqual(actual, expected);
-    });
+    })
     it('should return all (1, 3, 5)', () => {
         const first = 1;
         const second = 3;
@@ -211,4 +210,129 @@ describe('getOnlyPositiveSum', () => {
         //Then
         assert.deepEqual(actual, expected);
     });
+
+});
+
+describe('getExpressionMaxOfSum', () => {
+    it('should return expression f*s*t+3 (2, 4, 6)', () => {
+        const first = 2;
+        const second = 4;
+        const third = 6;
+        const expected = 51;
+
+        //When
+        const actual = getExpressionMaxOfSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return expression f+s+t+3 (2, 4, -6)', () => {
+        const first = 2;
+        const second = 4;
+        const third = -6;
+        const expected = 3;
+
+        //When
+        const actual = getExpressionMaxOfSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return nothing (0, 0, 0)', () => {
+        const first = 0;
+        const second = 0;
+        const third = 0;
+        const expected = 0;
+
+        //When
+        const actual = getExpressionMaxOfSum(first, second, third);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
+});
+
+describe('getMark', () => {
+    it('should return F (19)', () => {
+        const rate = 19;
+        const expected = 'F';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return E (25)', () => {
+        const rate = 25;
+        const expected = 'E';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return D (45)', () => {
+        const rate = 45;
+        const expected = 'D';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it ('should return C (69)', () => {
+        const rate = 69;
+        const expected = 'C';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return B (89)', () => {
+        const rate = 89;
+        const expected = 'B';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+    it('should return A (100)', () => {
+        const rate = 100;
+        const expected = 'A';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+     it('should return mistake (101)', () => {
+        const rate = 101;
+        const expected = 'Empty';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+     it('should return mistake (-101)', () => {
+        const rate = -101;
+        const expected = 'Empty';
+
+        //When
+        const actual = getMark(rate);
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
 });
