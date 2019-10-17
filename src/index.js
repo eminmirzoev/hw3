@@ -1,4 +1,3 @@
-
 const getProductOrSum = (first, second) => {
     const multy = first * second;
     const summ = first + second;
@@ -84,9 +83,43 @@ const getPrimeNum = number => {
     return true;
 };
 
-const getFactorial = n =>
-  n < 0
-    ? (() => {
-      })()
-    : n <= 1
-      ? 1:n * getFactorial(n - 1);
+const getFactorial = num => {
+    let result = 1;
+
+    if (!num) {
+        return 0;
+    }
+
+    for (let i = 1; i <= num; i++) {
+        result *= i;      
+    }
+
+    return result;
+};
+
+const getWeekNumber = day => {
+    let result = ' ';
+
+    switch(day) {
+        case 1:
+            result = 'Monday'; break;
+        case 2:
+            result = 'Tuesday'; break;
+        case 3:
+            result = 'Wednesday'; break;
+        case 4:
+            result = 'Thusday'; break;
+        case 5:
+            result = 'Friday'; break;
+        case 6:
+            result = 'Saturday'; break;
+        case 7:
+            result = 'Sunday'; break;
+
+        default:
+
+            result = ' ';
+      }
+      
+    return result;
+};

@@ -395,27 +395,17 @@ describe('getPrimeNum', () => {
 });
 
 describe('getFactorial', () => {
-    it('should return zero (6)', () => {
-        const number = 6;
-        const expected = 240;
+    it('should return 6! (6)', () => {
+        const num = 6;
+        const expected = 720;
 
         //When
-        const actual = getFactorial();
+        const actual = getFactorial(num);
 
         //Then
         assert.deepEqual(actual, expected);
     })
-    it('should return zero (-1)', () => {
-        const number = -1;
-        const expected = 0;
-
-        //When
-        const actual = getFactorial();
-
-        //Then
-        assert.deepEqual(actual, expected);
-    })
-    it('should return zero (0)', () => {
+    it('should return 0! (0)', () => {
         const number = 0;
         const expected = 0;
 
@@ -435,5 +425,89 @@ describe('getFactorial', () => {
         //Then
         assert.deepEqual(actual, expected);
     })
+    it('should return zero (-1)', () => {
+        const number = -1;
+        const expected = 0;
+
+        //When
+        const actual = getFactorial();
+
+        //Then
+        assert.deepEqual(actual, expected);
+    })
+
+});
+
+describe('getWeekNumber', () => {
+    it('should return week day Monday (1)', () => {
+        const day = 1;
+        const expected = 'Monday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })
+     it('should return week day Tuesday (2)', () => {
+        const day = 2;
+        const expected = 'Tuesday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })
+      it('should return week day Wednesday (3)', () => {
+        const day = 3;
+        const expected = 'Wednesday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })
+       it('should return week day Thusday (4)', () => {
+        const day = 4;
+        const expected = 'Thusday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })
+       it('should return week day Friday (5)', () => {
+        const day = 5;
+        const expected = 'Friday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })
+       it('should return week day Saturday (6)', () => {
+        const day = 6;
+        const expected = 'Saturday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })
+       it('should return week day Sunday (7)', () => {
+        const day = 7;
+        const expected = 'Sunday';
+
+        //When
+        const actual = getWeekNumber(day);
+
+        //Then 
+        assert.deepEqual(actual, expected);
+    })     
 
 });
